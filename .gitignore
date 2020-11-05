@@ -7,6 +7,8 @@
 
 # testing
 /coverage
+#ignore a single file
+Firebase.js
 
 # production
 /build
