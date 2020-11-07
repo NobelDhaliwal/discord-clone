@@ -9,10 +9,16 @@ import { auth } from "./Firebase";
 import { login, logout } from "./features/userSlice";
 
 function App() {
+  /*dispatch allows us to push things into the data layer 
+  so we can retrieve where ever we feel like */
   const dispatch = useDispatch();
   const user = useSelector(selectUser);
-
-  useEffect(() => {
+/*useSelector is a React hook and 
+putting selectUser as a piece of state will retrieve that piece of information. */ 
+  
+/*useEffect is a React hook that fires the code only once when the component loads. 
+We use a useEffect here because we wouldn’t want to be running in an infinite loop.*/ 
+useEffect(() => {
     auth.onAuthStateChanged((authUser) => {
       if (authUser) {
         // the user is logged in
@@ -32,15 +38,20 @@ function App() {
   }, [dispatch]);
 
   return (
+    /*We want to online render the app once the user is logged in right.So in order to do that we have to use something called the ternary operator 
+    which basically simplifies the if and else conditional statement to one line */
     <div className="app">
+      {/* we need to pull in the user into App.js. with useSelector hook  */}
       {user ? (
         <>
+        {/* We have two main components sidebar and chat */}
           <Sidebar />
           <Chat />
         </>
       ) : (
         <Login />
       )}
+      {/* if there is no user show login page */}
     </div>
   );
 }

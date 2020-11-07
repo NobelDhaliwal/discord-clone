@@ -53,7 +53,7 @@
     padding: 10px;
     border-top: 1px solid gray;
 }
-
+/* want voiceinfo to take as much as room possible */
 .sidebar_voiceInfo {
     flex: 1;
     padding: 10px;
@@ -75,15 +75,15 @@
 /* .sidebar_voiceIcons > .MuiSvgIcon-root {
     padding:10px;
 } */
-.sidebar__proflileInfo {
+.sidebar__profileInfo {
     flex: 1;
     padding: 10px;
 }
 
-.sidebar__proflileInfo>h3 {
+.sidebar__profileInfo>h3 {
     color: white;
 }
 
-.sidebar__proflileInfo>.MuiSvgIcon-root {
+.sidebar__profileInfo>.MuiSvgIcon-root {
     padding: 10px;
 }

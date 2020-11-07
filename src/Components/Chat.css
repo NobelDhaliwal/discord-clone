@@ -5,6 +5,9 @@
     background-color: #363a3f;
     height: 100vh;
   }
+  /* we want the rest of the screen to be taken up by the messages and with Flexbox,
+   which is what we are using, we can use flex: 1 to solve this problem.
+   To prevent overflow of your messages, add these lines of code. */
   
   .chat_msg {
     flex: 1;
@@ -19,7 +22,7 @@
     -ms-overflow-style: none;
     scrollbar-width: none;
   }
-  
+  /* msg section end */
   .chat_input {
     color: lightgray;
     display: flex;
@@ -41,11 +44,11 @@
     color: white;
     font-size: large;
   }
-  
+  /* we want form to take maximum roo */
   .chat_input > form {
     flex: 1;
   }
-  
+  /* we mdont want to display button */
   .chat_inputButton {
     display: none;
   }

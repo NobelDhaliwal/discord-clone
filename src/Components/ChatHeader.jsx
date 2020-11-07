@@ -10,6 +10,7 @@ const ChatHeader = ({channelName}) => {
     return (
         <div className="chatHeader">
             {/* in chatheader we have leftchatheader and rightchatheader */}
+            
             {/* left side */}
             <div className="chatHeader_left">
                 {/* Title*/}

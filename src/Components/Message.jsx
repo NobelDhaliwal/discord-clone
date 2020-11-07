@@ -8,7 +8,9 @@ const Message=({timestamp,user,message}) =>{
          
           <div className="message_info">
               <h4>
+                  {/* userName */}
                   {user.displayName}
+                  {/* Time Stamp */}
                   <span className="message_timestamp">
                          {new Date(timestamp?.toDate()).toUTCString()}
                   </span>

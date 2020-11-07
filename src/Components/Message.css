@@ -5,11 +5,12 @@
     padding: 20px;
     color: white;
   }
-  
+  /* let’s target the message__info to get some spacing in 
+  between the avatar and title by adding “margin-left: 20px”.  */
   .message_info {
     margin-left: 20px;
   }
-  
+  /* to make the timestamp smaller than the username. */
   .message_timestamp {
     color:gray;
     margin-left: 20px;

@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
-  /*We're going to use the Redux Toolkit createSlice function 
+  /* We're going to use the Redux Toolkit createSlice function 
   to make a reducer function that knows how to handle our posts data.
  Reducer functions need to have some initial data included 
 so that the Redux store has those values loaded when the app starts up*/

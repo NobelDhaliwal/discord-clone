@@ -16,10 +16,14 @@ const firebaseConfig = {
   };
   //3.intialize our firebase App using the configuration details we got from firebase
   //We have firebase.intializeApp method for intilizing App
+  /*The function initializeApp will create the firebase app and 
+  firestore enables you to write to the database. */ 
   const firebaseApp=firebase.initializeApp(firebaseConfig);
   //4.grab the database
   const db=firebaseApp.firestore();
  //5.do authentication
+/* Auth enables the authentication so when a user logs in it adds it to Firebase. 
+ Provider enables you to sign in using your Google Account. */
   const auth=firebase.auth();
   const provider=new firebase.auth.GoogleAuthProvider();
   export {auth,provider};

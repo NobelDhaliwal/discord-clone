@@ -45,8 +45,11 @@ function Chat() {
 
   return (
     <div className="chat">
+      {/* chat Header component */}
+      {/* Now let’s go into ChatHeader.js, put channelName as a prop and 
+      instead of the random channel name you put, type the below. */}
       <ChatHeader channelName={channelName} />
-
+      {/* message component */}
       <div className="chat_msg">
         {messages.map((message) => (
           <Message
@@ -57,6 +60,7 @@ function Chat() {
         ))}
       </div>
 
+          {/*Bottom Input Section  */}
       <div className="chat_input">
         <AddCircleIcon fontSize="large" />
         <form>
@@ -66,6 +70,8 @@ function Chat() {
             onChange={(e) => setInput(e.target.value)}
             placeholder={`Message #${channelName}`}
           />
+          {/* Now we don’t really want to display the button because 
+          Discord doesn’t have a button and to send messages you hit Enter. */}
           <button
             disabled={!channelId}
             className="chat_inputButton"
